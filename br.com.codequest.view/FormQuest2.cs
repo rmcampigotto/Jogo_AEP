@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Jogo_I_AEP.br.com.codequest.view
 {
-    public partial class FormQuest1 : Form
+    public partial class FormQuest2 : Form
     {
-        public FormQuest1()
+        public FormQuest2()
         {
             InitializeComponent();
         }
@@ -34,19 +34,18 @@ namespace Jogo_I_AEP.br.com.codequest.view
 
         private void btnOpcao3_Click(object sender, EventArgs e)
         {
-            //correto
-            MessageBox.Show("Opção Correta!");
-
-            //abrir próxima quest
-            FormQuest2 formQuest2 = new FormQuest2();
-
-            formQuest2.Show();
-            this.Close();
+            MessageBox.Show("Opção Incorreta!");
         }
 
         private void btnOpcao4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Opção Incorreta!");
+            //correto
+            MessageBox.Show("Opção Correta!");
+
+            FormQuest3 form = new FormQuest3();
+            form.Show();
+
+            this.Close();
         }
     }
 }
